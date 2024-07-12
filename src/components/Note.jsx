@@ -1,17 +1,18 @@
-import React from 'react'
-const Note = ({description,initialPos,...props}) => {
+import React, { forwardRef } from 'react'
+const Note = forwardRef(({description,initialPos,...props},ref) => {
   return (
-    <div   style={{
+    <div  
+    ref={ref} style={{
       position: "absolute",
       left: `${initialPos?.x}px`,
       top: `${initialPos?.y}px`}} >
-        <div className={`absolute select-none border-2 border-black p-2 w-[200px] cursor-move bg-yellow-200`} {...props}>
+        <div className={`select-none border-2 border-black p-2 w-[200px] cursor-move bg-yellow-200`} {...props}>
           📌 
           {description}
           </div>
     
     </div>
   )
-}
+})
 
 export default Note
