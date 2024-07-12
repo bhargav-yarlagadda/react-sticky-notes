@@ -1,3 +1,3 @@
 ﻿# React Sticky Notes
-# npm install
-# npm run dev
+### npm install
+### npm run dev
